@@ -5,9 +5,5 @@ This Nanodegree program helps to operationalize infrastructure at scale and deli
 
 *Projects:*  :open_book:
 1. Deply static website on AWS - :white_check_mark:
-2. Deploy a high-availability website app using CloudFormation - :negative_squared_cross_mark:
-3. Jenkins pipeline on AWS - :negative_squared_cross_mark:
-4. Operationalize a Machine Learning Microservice API - :negative_squared_cross_mark:
-5. Capstone project: Web application showing COVID spread statistics for NSW, Australia - :negative_squared_cross_mark:
 
 *Certificate* - :negative_squared_cross_mark: 
