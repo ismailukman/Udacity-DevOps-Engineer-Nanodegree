@@ -1,0 +1,100 @@
+aws configure --profile new_name
+
+aws configure
+aws configure --profile default
+
+aws configure
+aws --version
+
+aws s3 ls
+Cloud Formation VPC 
+https://docs.aws.amazon.com/fr_fr/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html
+
+aws cloudformation create-stack  --stack-name myFirstTest --region us-east-1 --template-body file://testcfn.yml
+
+aws cloudformation create-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" --region=us-west-2
+
+aws cloudformation update-stack  --stack-name myFirstTest --region us-east-1 --template-body file://testcfn.yml
+
+aws cloudformation describe-stacks --stack-name myFirstTest
+
+create.sh
+aws cloudformation create-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --region=us-east-1
+update.sh
+aws cloudformation update-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --region=us-east-1
+
+./create.sh ourdemoinfra lukman_infra.yml lukman_infra_param.json
+
+./update.sh ourdemoinfra lukman_infra.yml lukman_infra_param.json
+./create.sh ourdemoinfra lukman_infra.yml lukman_infra_param.json
+
+
+8 Principles of Continuous Delivery
+Repeatable Reliable Process
+Automate Everything
+Version Control Everything
+Bring the Pain Forward
+Build-in Quality
+"Done" Means Released
+Everyone is Responsible
+Continuous Improvement
+
+
+Key Terms
+Pipeline: A set of data processing elements connected in series, where the output of one element is the input of the next one.
+Continuous Integration: The practice of merging all developers' working copies to a shared mainline several times a day.
+Continuous Delivery: An engineering practice in which teams produce and release value in short cycles.
+Continuous Deployment: A software engineering approach in which the value is delivered frequently through automated deployments.
+Infrastructure as Code: The management of infrastructure using code.
+Provisioning: The process of setting up IT infrastructure.
+Artifact: A product of some process applied to the code repository.
+DevOps: A set of practices that works to automate and integrate the processes between software development and IT teams.
+Testing: A practice that seeks to ensure the quality of the software.
+
+Deployment Strategy	Description
+Big-Bang	Replace A with B all at once.
+Blue Green	Two versions of production: Blue or previous version and Green or new version. Traffic can still be routed to blue while testing green. Switching to the new version is done by simply shifting traffic from blue to green.
+Canary	Aka Rolling Update, After deploying the new version, start routing traffic to new version little by little until all traffic is hitting the new production. Both versions coexist for a period of time.
+A/B Testing	Similar to Canary, but instead of routing traffic to new version to accomplish a full deployment, you are testing your new version with a subset of users for feedback. You might end up routing all traffic to the new version, but that's always the goal.
+
+
+Build Stages
+Think of stages like categories or types of jobs. Stages are used to group jobs and control timing.
+
+Stage	Description
+Build	Everything that has to do with making code executable in production (e.g. Compile). The goal is to produce an artifact.
+Test	All automated tests that verify at the code level.
+Analyze	Any static analysis on the code or checking of dependencies.
+Deploy	Anything to do with creating server instances or copying pre-built application files to an instance.
+Verify	Any tests that can be run against a running instance of the application, often against a pre-production instance.
+Promote	Replacing the current production environment with the new version which was just built and deployed.
+Revert	Rolling back or undoing changes in case any verification fails after deployment.
+
+Pipeline > Stages > Job > Step
+
+
+Tool Creator/Maintainer	Differentiators
+    Jenkins	Various Contributors	Vibrant open-source communbity, 100% free
+    Gitlab Community	Gitlab	Open-source, installable version of the popular cloud-based service, 100% free
+    Team City	JetBrains	Very mature, JetBrains support
+    Team Foundation Server (TFS)	Microsoft	Seemless integration with Microsoft products, Microsoft support
+
+Tool Creator/Maintainer	Differentiators
+    Bamboo	Atlassian	Integrates well with other Atlassian products like Stride and Jira.
+    Circle CI Circle Internet Services	Free for limited use, personal or business. Boasts of faster builds.
+    Travis CI Travis CI	Extremely simple CI/CD orchestration tool. Some specialty features for libraries and packages. Free for open-source projects.
+    GitLab GitLab Complete set of development tools including git repositories and built-in, integrated CI/CD pipelines. 2000 free minutes of CI/CD jobs per month.
+
+
+We discussed
+    Fundamentals of CI/CD
+    Benefits of CI/CD
+    Continuous Delivery as a Paradigm
+    Some Best Practices
+    Deployment Strategies, Especially Blue Green Deployment
+    Pipelines and Jobs
+    CI/CD Tools
+
+
+
+
