@@ -1,0 +1,14 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "UdagramLukmanWebApp"
+    },
+    {
+        "ParameterKey": "ServerAMIId",
+        "ParameterValue": "ami-098e42ae54c764c35"
+    },
+    {
+        "ParameterKey": "InstanceType",
+        "ParameterValue": "t3.medium"
+    }
+]
