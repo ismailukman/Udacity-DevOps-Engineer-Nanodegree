@@ -18,4 +18,4 @@ You are given a pre-trained, sklearn model that has been trained to predict hous
 
 Link below:
 
-[Operationalize Machine Learning Microservice API](https://app.circleci.com/pipelines/github/ismailukman/operationalize-ml-microservice)
+[Operationalize Machine Learning Microservice API](https://github.com/ismailukman/operationalize-ml-microservice)
